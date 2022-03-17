@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <property name="APPLICATION_NAME" value="learning-concurrency"/>
+    <statusListener class="ch.qos.logback.core.status.NopStatusListener"/>
+    <appender name="Console"
+              class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>
+                %highlight(%d{ISO8601}) %highlight(%-5level) [${APPLICATION_NAME}][%blue(%t)] %yellow(%C{1.}) %red(%M\(%line\)): %msg%n%throwable
+            </pattern>
+        </layout>
+    </appender>
+    <!-- LOG everything at INFO level -->
+    <root level="info">
+        <appender-ref ref="Console"/>
+    </root>
+    <logger name="ch.qos.logback" level="OFF" additivity="false"/>
+</configuration>
