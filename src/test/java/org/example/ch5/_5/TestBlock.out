@@ -1,0 +1,224 @@
+2022-03-24 15:46:34
+Full thread dump Java HotSpot(TM) 64-Bit Server VM (25.321-b07 mixed mode):
+
+"Attach Listener" #33 daemon prio=9 os_prio=31 tid=0x00007fa4a18f1800 nid=0x6a03 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"DestroyJavaVM" #32 prio=5 os_prio=31 tid=0x00007fa49f80b000 nid=0xf03 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"producer-19" #30 prio=5 os_prio=31 tid=0x00007fa49f8b1000 nid=0x6703 waiting on condition [0x000070000c874000]
+   java.lang.Thread.State: WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x000000076ba58ca8> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+	at java.util.concurrent.ArrayBlockingQueue.put(ArrayBlockingQueue.java:353)
+	at org.example.ch5._5.TestBlock$MyRunnable.run(TestBlock.java:40)
+	at java.lang.Thread.run(Thread.java:750)
+
+"producer-18" #29 prio=5 os_prio=31 tid=0x00007fa49f8b0000 nid=0x6503 waiting on condition [0x000070000c771000]
+   java.lang.Thread.State: WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x000000076ba58ca8> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+	at java.util.concurrent.ArrayBlockingQueue.put(ArrayBlockingQueue.java:353)
+	at org.example.ch5._5.TestBlock$MyRunnable.run(TestBlock.java:40)
+	at java.lang.Thread.run(Thread.java:750)
+
+"producer-17" #28 prio=5 os_prio=31 tid=0x00007fa49f8af800 nid=0x6303 waiting on condition [0x000070000c66e000]
+   java.lang.Thread.State: WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x000000076ba58ca8> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+	at java.util.concurrent.ArrayBlockingQueue.put(ArrayBlockingQueue.java:353)
+	at org.example.ch5._5.TestBlock$MyRunnable.run(TestBlock.java:40)
+	at java.lang.Thread.run(Thread.java:750)
+
+"producer-16" #27 prio=5 os_prio=31 tid=0x00007fa49f8ae800 nid=0x6203 waiting on condition [0x000070000c56b000]
+   java.lang.Thread.State: WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x000000076ba58ca8> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+	at java.util.concurrent.ArrayBlockingQueue.put(ArrayBlockingQueue.java:353)
+	at org.example.ch5._5.TestBlock$MyRunnable.run(TestBlock.java:40)
+	at java.lang.Thread.run(Thread.java:750)
+
+"producer-15" #26 prio=5 os_prio=31 tid=0x00007fa49f8ae000 nid=0x6003 waiting on condition [0x000070000c468000]
+   java.lang.Thread.State: WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x000000076ba58ca8> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+	at java.util.concurrent.ArrayBlockingQueue.put(ArrayBlockingQueue.java:353)
+	at org.example.ch5._5.TestBlock$MyRunnable.run(TestBlock.java:40)
+	at java.lang.Thread.run(Thread.java:750)
+
+"producer-14" #25 prio=5 os_prio=31 tid=0x00007fa49f8ad000 nid=0xa003 waiting on condition [0x000070000c365000]
+   java.lang.Thread.State: WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x000000076ba58ca8> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+	at java.util.concurrent.ArrayBlockingQueue.put(ArrayBlockingQueue.java:353)
+	at org.example.ch5._5.TestBlock$MyRunnable.run(TestBlock.java:40)
+	at java.lang.Thread.run(Thread.java:750)
+
+"producer-13" #24 prio=5 os_prio=31 tid=0x00007fa49f8ac800 nid=0xa103 waiting on condition [0x000070000c262000]
+   java.lang.Thread.State: WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x000000076ba58ca8> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+	at java.util.concurrent.ArrayBlockingQueue.put(ArrayBlockingQueue.java:353)
+	at org.example.ch5._5.TestBlock$MyRunnable.run(TestBlock.java:40)
+	at java.lang.Thread.run(Thread.java:750)
+
+"producer-12" #23 prio=5 os_prio=31 tid=0x00007fa49f88c000 nid=0x5707 waiting on condition [0x000070000ba4a000]
+   java.lang.Thread.State: WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x000000076ba58ca8> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+	at java.util.concurrent.ArrayBlockingQueue.put(ArrayBlockingQueue.java:353)
+	at org.example.ch5._5.TestBlock$MyRunnable.run(TestBlock.java:40)
+	at java.lang.Thread.run(Thread.java:750)
+
+"producer-11" #22 prio=5 os_prio=31 tid=0x00007fa49f88b000 nid=0x5907 waiting on condition [0x000070000be56000]
+   java.lang.Thread.State: WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x000000076ba58ca8> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+	at java.util.concurrent.ArrayBlockingQueue.put(ArrayBlockingQueue.java:353)
+	at org.example.ch5._5.TestBlock$MyRunnable.run(TestBlock.java:40)
+	at java.lang.Thread.run(Thread.java:750)
+
+"producer-10" #21 prio=5 os_prio=31 tid=0x00007fa49f00b800 nid=0xa203 waiting on condition [0x000070000c05c000]
+   java.lang.Thread.State: WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x000000076ba58ca8> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+	at java.util.concurrent.ArrayBlockingQueue.put(ArrayBlockingQueue.java:353)
+	at org.example.ch5._5.TestBlock$MyRunnable.run(TestBlock.java:40)
+	at java.lang.Thread.run(Thread.java:750)
+
+"producer-9" #20 prio=5 os_prio=31 tid=0x00007fa4a2065000 nid=0x5b07 waiting on condition [0x000070000bf59000]
+   java.lang.Thread.State: WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x000000076ba58ca8> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+	at java.util.concurrent.ArrayBlockingQueue.put(ArrayBlockingQueue.java:353)
+	at org.example.ch5._5.TestBlock$MyRunnable.run(TestBlock.java:40)
+	at java.lang.Thread.run(Thread.java:750)
+
+"producer-8" #19 prio=5 os_prio=31 tid=0x00007fa4a0879000 nid=0x5a07 waiting on condition [0x000070000bc50000]
+   java.lang.Thread.State: WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x000000076ba58ca8> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+	at java.util.concurrent.ArrayBlockingQueue.put(ArrayBlockingQueue.java:353)
+	at org.example.ch5._5.TestBlock$MyRunnable.run(TestBlock.java:40)
+	at java.lang.Thread.run(Thread.java:750)
+
+"producer-3" #14 prio=5 os_prio=31 tid=0x00007fa4a2068800 nid=0xa603 waiting on condition [0x000070000bd53000]
+   java.lang.Thread.State: WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x000000076ba58ca8> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+	at java.util.concurrent.ArrayBlockingQueue.put(ArrayBlockingQueue.java:353)
+	at org.example.ch5._5.TestBlock$MyRunnable.run(TestBlock.java:40)
+	at java.lang.Thread.run(Thread.java:750)
+
+"producer-1" #12 prio=5 os_prio=31 tid=0x00007fa4a18e5800 nid=0xa903 waiting on condition [0x000070000bb4d000]
+   java.lang.Thread.State: WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x000000076ba58ca8> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+	at java.util.concurrent.ArrayBlockingQueue.put(ArrayBlockingQueue.java:353)
+	at org.example.ch5._5.TestBlock$MyRunnable.run(TestBlock.java:40)
+	at java.lang.Thread.run(Thread.java:750)
+
+"Service Thread" #10 daemon prio=9 os_prio=31 tid=0x00007fa4a2008800 nid=0x3b03 runnable [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C1 CompilerThread3" #9 daemon prio=9 os_prio=31 tid=0x00007fa4a0024000 nid=0x3f03 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread2" #8 daemon prio=9 os_prio=31 tid=0x00007fa4a0023000 nid=0x4103 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread1" #7 daemon prio=9 os_prio=31 tid=0x00007fa4a0022800 nid=0x4303 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread0" #6 daemon prio=9 os_prio=31 tid=0x00007fa4a0021800 nid=0x4403 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Monitor Ctrl-Break" #5 daemon prio=5 os_prio=31 tid=0x00007fa4a1163800 nid=0x4503 runnable [0x000070000b335000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+	- locked <0x000000076aca59a8> (a java.io.InputStreamReader)
+	at java.io.InputStreamReader.read(InputStreamReader.java:184)
+	at java.io.BufferedReader.fill(BufferedReader.java:161)
+	at java.io.BufferedReader.readLine(BufferedReader.java:324)
+	- locked <0x000000076aca59a8> (a java.io.InputStreamReader)
+	at java.io.BufferedReader.readLine(BufferedReader.java:389)
+	at com.intellij.rt.execution.application.AppMainV2$1.run(AppMainV2.java:49)
+
+"Signal Dispatcher" #4 daemon prio=9 os_prio=31 tid=0x00007fa4a1046000 nid=0x3803 runnable [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Finalizer" #3 daemon prio=8 os_prio=31 tid=0x00007fa49f823000 nid=0x4b03 in Object.wait() [0x000070000b029000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x000000076ab08ee8> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
+	- locked <0x000000076ab08ee8> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:165)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:216)
+
+"Reference Handler" #2 daemon prio=10 os_prio=31 tid=0x00007fa4a1044000 nid=0x4d03 in Object.wait() [0x000070000af26000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x000000076ab06c00> (a java.lang.ref.Reference$Lock)
+	at java.lang.Object.wait(Object.java:502)
+	at java.lang.ref.Reference.tryHandlePending(Reference.java:191)
+	- locked <0x000000076ab06c00> (a java.lang.ref.Reference$Lock)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:153)
+
+"VM Thread" os_prio=31 tid=0x00007fa4a1043800 nid=0x2d03 runnable 
+
+"GC task thread#0 (ParallelGC)" os_prio=31 tid=0x00007fa49f80d000 nid=0x1e07 runnable 
+
+"GC task thread#1 (ParallelGC)" os_prio=31 tid=0x00007fa49f80d800 nid=0x1c03 runnable 
+
+"GC task thread#2 (ParallelGC)" os_prio=31 tid=0x00007fa49f819000 nid=0x1903 runnable 
+
+"GC task thread#3 (ParallelGC)" os_prio=31 tid=0x00007fa49f819800 nid=0x2a03 runnable 
+
+"GC task thread#4 (ParallelGC)" os_prio=31 tid=0x00007fa49f81a800 nid=0x2b03 runnable 
+
+"GC task thread#5 (ParallelGC)" os_prio=31 tid=0x00007fa4a000b800 nid=0x5203 runnable 
+
+"GC task thread#6 (ParallelGC)" os_prio=31 tid=0x00007fa4a0009000 nid=0x5003 runnable 
+
+"GC task thread#7 (ParallelGC)" os_prio=31 tid=0x00007fa4a1009000 nid=0x2c03 runnable 
+
+"VM Periodic Task Thread" os_prio=31 tid=0x00007fa4a1164000 nid=0x3c03 waiting on condition 
+
+JNI global references: 15
+
