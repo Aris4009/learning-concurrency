@@ -3,6 +3,8 @@ package org.example.ch6._4;
 import java.util.HashMap;
 import java.util.Map;
 
+import cn.hutool.core.lang.TypeReference;
+import cn.hutool.json.JSONUtil;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -18,8 +20,19 @@ public class TestThreadLocal {
 
 		private static final ThreadLocal<Integer> threadLocal = ThreadLocal.withInitial(() -> 1);
 
-		private static final ThreadLocal<Map<String, Object>> threadMap = InheritableThreadLocal
-				.withInitial(HashMap::new);
+		private static final ThreadLocal<Map<String, Object>> threadMap = new InheritableThreadLocal<Map<String, Object>>() {
+			@Override
+			protected Map<String, Object> initialValue() {
+				return new HashMap<>();
+			}
+
+			@Override
+			protected Map<String, Object> childValue(Map<String, Object> parentValue) {
+				String str = JSONUtil.toJsonStr(parentValue);
+				return JSONUtil.toBean(str, new TypeReference<Map<String, Object>>() {
+				}, false);
+			}
+		};
 
 		public static int getId() {
 			int id = threadLocal.get();
@@ -78,19 +91,19 @@ public class TestThreadLocal {
 	}
 
 	public static void main(String[] args) {
-//		IDGenerator.setMap(String.valueOf(Thread.currentThread().getId()), Thread.currentThread().getName());
-//		Runnable runnable = new MyRunnable();
-//		int num = 4;
-//		for (int i = 0; i < num; i++) {
-//			Thread t = new Thread(runnable);
-//			t.start();
-//		}
-
+		IDGenerator.setMap(String.valueOf(Thread.currentThread().getId()), Thread.currentThread().getName());
+		Runnable runnable = new MyRunnable();
 		int num = 4;
 		for (int i = 0; i < num; i++) {
-			Runnable runnable = new MyRunnable2(0L);
-			Thread thread = new Thread(runnable);
-			thread.start();
+			Thread t = new Thread(runnable);
+			t.start();
 		}
+
+//		int num = 4;
+//		for (int i = 0; i < num; i++) {
+//			Runnable runnable = new MyRunnable2(0L);
+//			Thread thread = new Thread(runnable);
+//			thread.start();
+//		}
 	}
 }
